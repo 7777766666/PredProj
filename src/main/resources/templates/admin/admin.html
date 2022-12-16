@@ -14,16 +14,16 @@
 <body>
 <nav class="navbar navbar-dark bg-dark">
   <h5>
-    <a class="navbar-text text-white font-bold" th:text="${admin.email}">Email</a>
+    <a class="navbar-text text-white font-bold " style="text-decoration: none" th:text="${admin.email}">Email</a>
     <th:block th:object="${admin}">
-      <a class="text-white font-bold" >with roles:</a>
-      <a class="text-white font-bold"  th:each="item : *{roles}" th:text="${item.getNoPrefix()} + '  '">Item description here...</a>
+      <a class="text-white font-bold" style="text-decoration: none">with roles:</a>
+      <a class="text-white font-bold"  style="text-decoration: none" th:each="item : *{roles}" th:text="${item.getNoPrefix()} + '  '">Item description here...</a>
     </th:block>
   </h5>
 
   <form th:action="@{/logout}" method="post">
-    <button class="btn btn-link btn-xs">
-      <p class="text-muted">Logout</p>
+    <button class="btn btn-link btn-xs" style="text-decoration: none">
+      <p class="text-muted" style="text-decoration: none">Logout</p>
     </button>
   </form>
 </nav>
