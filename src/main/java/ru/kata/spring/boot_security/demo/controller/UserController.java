@@ -22,8 +22,12 @@ public class UserController {
     public String printWelcome(ModelMap model, Principal principal) {
         User user = userDao.findByEmail(principal.getName());
         model.addAttribute("user", user);
+        model.addAttribute("roles", user.getRoles());
         return "user/user";
     }
+
+
+
 }
 
 

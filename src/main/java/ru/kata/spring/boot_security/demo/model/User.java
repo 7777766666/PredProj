@@ -33,7 +33,7 @@ public class User implements UserDetails {
     private String name;
 
     @NotNull
-    @Column(name = "second_name")
+    @Column(name = "last_name")
     private String lastName;
 
     @NotNull
