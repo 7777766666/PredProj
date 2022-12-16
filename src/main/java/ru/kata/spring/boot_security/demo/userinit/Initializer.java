@@ -33,9 +33,9 @@ public class Initializer {
         roleAdmin.add(role2);
         roleUser.add(role2);
 
-        User adminUser1 = new User("AdminUser", "SuperAdminUser", 111, "ad@ad","ad" , roleAdmin);
-        User user1 = new User("User", "MainUser", 55, "u@u","u", roleUser);
-        User admin1 = new User("admin", "MainAdmin", 99, "a@a","a", roleAdmin);
+        User adminUser1 = new User("AdminUser", "SuperAdminUser", 111, "adminUser@adminUser","adminUser" , roleAdmin);
+        User user1 = new User("User", "MainUser", 55, "u@u","user", roleUser);
+        User admin1 = new User("admin", "MainAdmin", 99, "admin@admin.ru","admin", roleAdmin);
 
         userService.add(admin1);
         userService.add(user1);
