@@ -13,8 +13,6 @@ public interface UserDao {
 
     boolean add(User user);
 
-    void saveUser(User user);
-
     void removeUser(Integer id);
 
     void updateUser(User user);

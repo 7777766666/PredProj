@@ -21,8 +21,8 @@ public class UserController {
     @GetMapping(value = "")
     public String printWelcome(ModelMap model, Principal principal) {
         User user = userDao.findByEmail(principal.getName());
-        model.addAttribute("user", user);
         model.addAttribute("roles", user.getRoles());
+        model.addAttribute("user", user);
         return "user/user";
     }
 

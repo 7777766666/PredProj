@@ -39,16 +39,16 @@ public class AdminController {
         return "redirect:/admin";
     }
 
+    @DeleteMapping("/delete/{id}")
+    public String delete(@PathVariable("id") Integer id, Model model) {
+        userService.removeUser(id);
+        return "redirect:/admin";
+    }
+
     @PatchMapping("/user-update/{id}")
     public String editUser(@PathVariable("id") Integer id, User user) {
         user.setId(id);
         userService.updateUser(user);
-        return "redirect:/admin";
-    }
-
-    @DeleteMapping("/delete/{id}")
-    public String delete(@PathVariable("id") Integer id, Model model) {
-        userService.removeUser(id);
         return "redirect:/admin";
     }
 }

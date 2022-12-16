@@ -5,9 +5,6 @@ import ru.kata.spring.boot_security.demo.model.Role;
 import java.util.List;
 
 public interface RoleDao {
-    Role findByIdRole(Integer id);
-
-    List<Role> listRoles();
 
     boolean add(Role role);
 

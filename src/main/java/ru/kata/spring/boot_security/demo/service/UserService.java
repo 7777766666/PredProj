@@ -13,15 +13,11 @@ public interface UserService extends UserDetailsService {
 
     List<User> listUsers();
 
-    void saveUser(User user);
-
     void removeUser(Integer id);
 
     void updateUser(User user);
 
     boolean add(User user);
-
-    List<Role> listRoles();
 
     List<Role> listByRole(List<String> lsr);
 

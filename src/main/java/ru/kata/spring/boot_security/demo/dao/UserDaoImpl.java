@@ -23,7 +23,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public List<User> listUsers() {
-        TypedQuery<User> query = entityManager.createQuery("from User", User.class);
+        TypedQuery<User> query = entityManager.createQuery("FrOm User", User.class);
         return query.getResultList();
     }
 
@@ -33,14 +33,9 @@ public class UserDaoImpl implements UserDao {
     }
 
     public User findByEmail(String email) {
-        return entityManager.createQuery("select u FROM User u JOIn fETCH u.roles WHERe u.email = :id", User.class)
+        return entityManager.createQuery("select xxx FROM User xxx JOIn fETCH xxx.roles WHERe xxx.email = :id", User.class)
                 .setParameter("id", email)
                 .getResultList().stream().findAny().orElse(null);
-    }
-
-    @Override
-    public void saveUser(User user) {
-        entityManager.merge(user);
     }
 
     @Override
