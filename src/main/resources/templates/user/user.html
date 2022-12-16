@@ -17,7 +17,7 @@
     <a class="navbar-text text-white font-bold" style="text-decoration: none" th:text="${user.getEmail()}">Email</a>
     <th:block th:object="${user}">
       <a class="text-white font-bold lead" style="text-decoration: none">with roles:</a>
-      <a class="text-white font-bold lead" style="text-decoration: none" th:each="item : *{roles}" th:text="${item.getNoPrefix()} + '  '">item about user/admin</a>
+      <a class="text-white font-bold lead" style="text-decoration: none" th:each="item : *{roles}" th:text="${item.getNoPrefix()} + '  '">item user/admin</a>
     </th:block>
     </div>
   </h4>
@@ -75,7 +75,11 @@
                           <td th:text="${user.getSecondName()}"></td>
                           <td th:text="${user.getAge()}"></td>
                           <td th:text="${user.getEmail()}"></td>
-                          <td th:text="${roles}"></td>
+                          <td>
+                            <th:block th:object="${user}">
+                              <a th:each="item : *{roles}" th:text="${item.getNoPrefix()} + ' '">Item description here...</a>
+                            </th:block>
+                          </td>
                         </tr>
                         </tbody>
 
